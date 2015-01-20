@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title><![CDATA[ {{site.title}} ]]></title>
+  <link href="{{site.url}}/atom.xml" rel="self" />
+  <link href="{{site.url}}" />
+  <updated>{{d-iso site.date}}</updated>
+  <id>{{site.url}}</id>
+  {{#each site.authors}}
+  <author>
+    <name>{{name}}</name>
+    <email>{{email}}</email>
+  </author>
+  {{/each}}
+  {{#each (-take 10 models)}}
+    <entry>
+    <title><![CDATA[ {{this.title}} ]]></title>
+    <link herf="{{this.url}}" />
+    <updated>{{d-iso ./header.date}}</updated>
+    <id>{{this.url}}</id>
+    <content type="html"><![CDATA[
+      {{{s-replace "/articles/" (f-join ../site.url "/articles/") this.contentsWithoutLayouts "g"}}}
+    ]]></content>
+    </entry>
+  {{/each}}
+</feed>

@@ -1,0 +1,14 @@
+{
+  "name": "dogfeet",
+  "version": "0.0.0",
+  "license": "MIT",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "modernizr" : "*",
+    "jquery" : "*",
+    "bootstrap" : "*"
+  },
+  "directory": "app/bower_components",
+  "private": true
+}

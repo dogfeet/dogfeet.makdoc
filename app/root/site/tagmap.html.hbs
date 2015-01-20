@@ -1,0 +1,27 @@
+<style rel="stylesheet" media="screen, projection" scoped>
+  .row > [class*="col-sm"] {
+    margin-left: 10px;
+  }
+</style>
+
+<h1>Tagmap</h1>
+
+<!-- {{-let 'modelGroup' (_group-model models)}} -->
+
+<section id="tagmap">
+  {{#each (-grouped 3 (-sort (-keys modelGroup)))}}
+  <div class="row">
+    {{! [[tag1, tag2], [..., ...]] }}
+    {{#each this}}
+      <div id="{{{this}}}" class="col-xs-3">
+        <h4>{{{this}}}</h4>
+        <ul>
+          {{#each (-get this ../../modelGroup)}}
+            <li><a href="{{{this.uri}}}">{{{this.title}}}</a></li>
+          {{/each}}
+        </ul>
+      </div>
+    {{/each}}
+  </div>
+  {{/each}}
+</section>

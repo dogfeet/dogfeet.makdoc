@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {{! Meta }}
+
+  <meta charset="utf=8"></meta>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"></meta>
+  <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+
+  <title>#dogfeet - {{{-find '-not-empty?' (-array title site.title)}}}</title>
+  {{>meta-seo}}
+
+  {{! Icons }}
+  <link rel="shortcut icon" href="images/favicon.ico"></link>
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png"></link>
+  <link rel="apple-touch-icon" sizes="72x72"
+    href=" ='images/apple-touch-icon-72x72.png"></link>
+  <link rel="apple-touch-icon" sizes="114x114"
+    href="images/apple-touch-icon-114x114.png"></link>
+  <link rel="alternate" type="application/atom+xml"
+    title="{{{-find '-not-empty?' (-array title site.title)}}} &raquo; Feed"
+    href="http://feeds.feedburner.com/github/dogfeet"></link>
+
+  {{! Styles }}
+  <link rel="stylesheet" media="screen, projection"
+    href="/bower_components/bootstrap/dist/css/bootstrap.min.css"></link>
+  <link rel="stylesheet" media="screen, projection"
+    href="/styles/pygment-github.css"></link>
+  <link rel="stylesheet" media="screen, projection"
+    href="/styles/style.css"></link>
+  {{! <link rel="stylesheet"
+    href="/styles/print.css"
+    media="print"></link> }}
+
+</head>
+<body>
+  {{! Topbar }}
+  <nav class="navbar navbar-default navbar-static-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="/">dogfeet</a>
+      </div>
+      <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+          <li><a href="/site/archive.html">Archive</a></li>
+          <li><a href="/site/tagmap.html">Tagmap</a></li>
+        </ul>
+        <form id="search-form" class="navbar-form navbar-right" action="http://google.com/search" method="get">
+          <input type="hidden" name="q" value="site:dogfeet.github.io"></input>
+          <input class="form-control" type="text" name="q" results="0" placeholder="Search..."></input>
+        </form>
+      </div><!--/.nav-collapse -->
+    </div>
+  </nav>
+  <div class="container">
+    <div>
+      {{{contents}}}
+    </div>
+    <footer class="footer"><p>Copyright &copy; 2008+ Dogfeet from coding to pixels</p></footer>
+  </div>
+
+  {{! Scripts }}
+  <script src="/bower_components/jquery/dist/jquery.js"></script>
+  <script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="/scripts/script.js"></script>
+
+  {{! GA }}
+  <script>
+    if( '{{{site.url}}}' === 'http://' + window.location.hostname ) {
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-27493298-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    }
+  </script>
+</body>
+</html>

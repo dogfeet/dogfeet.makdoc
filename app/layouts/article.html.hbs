@@ -1,0 +1,44 @@
+<link rel="stylesheet" media="screen, projection"
+  href="/styles/github.css"></link>
+<link rel="stylesheet" media="screen, projection"
+  href="/styles/markdown.css"></link>
+
+<section class="content">
+  <article id="post" class="row post {{{class}}}" typeof="sioc:post" about="{{{uri}}}" lang="ko-kr">
+    {{! Date & Title }}
+    <div class="col-sm-2 small-font">
+      <br /><br />
+      <p property="dc:created">{{{d-format 'YYYY MMM DD' date}}}</p>
+      {{! Author & Info }}
+      <p class="small-font top-line"> - by<br />{{{s-replace ',' '<br />' (_gen-authors this.author) 'g'}}}</p>
+      {{! Social Button }}
+      <div id="social-buttons" class="top-line">
+        <ul class="unstyled">
+          <li><a class="twitter-share-button" href="https://twitter.com/share"
+            data-url="{{{url}}}" data-via="{{{-join (-map 's-trim' (s-split ',' author)) ' @'}}}"
+            data-count="horizontal" data-lang="en">Tweet</a></li>
+          <li><div class="g-plusone" data-size="medium" data-href="{{{url}}}"></div></li>
+          <li><div class="fb-like"
+            data-href="{{{url}}}" data-send="false"
+            data-layout="button_count" data-show-faces="false"></div></li>
+        </ul>
+      </div>
+      {{! / Social Button }}
+
+      {{! Tags }}
+      <p class="small-font top-line">{{{_tag-links this.tags}}}</p>
+    </div>
+
+    {{! Content Container }}
+    <div class="col-sm-10">
+
+      {{! Content }}
+      <div property="sioc:content">{{{contents}}}</div>
+    </div>
+  </article>
+</section>
+
+<div id="fb-root"></div>
+<script src="//connect.facebook.net/en_US/all.js#xfbml=1"></script>
+<script src="http://platform.twitter.com/widgets.js"></script>
+<script src="https://apis.google.com/js/plusone.js"></script>

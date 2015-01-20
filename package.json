@@ -1,0 +1,66 @@
+{
+  "name": "dogfeet.makdoc",
+  "description": "The best project ever.",
+  "version": "0.1.0",
+  "homepage": "https://github.com/pismute/dogfeet.makdoc",
+  "author": {
+    "name": "Changwoo Park",
+    "email": "pismute@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/pismute/dogfeet.makdoc.git"
+  },
+  "bugs": {
+    "url": "https://github.com/pismute/dogfeet.makdoc/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/pismute/dogfeet.makdoc/blob/master/LICENSE-MIT"
+    }
+  ],
+  "private": true,
+  "main": "lib/dogfeet.makdoc",
+  "engines": {
+    "node": ">= 0.10.0"
+  },
+  "scripts": {
+    "test": "gulp test"
+  },
+  "devDependencies": {
+    "chai": "*",
+    "dashbars": "*",
+    "del": "*",
+    "gulp": "*",
+    "gulp-autoprefixer": "*",
+    "gulp-cache": "*",
+    "gulp-cached": "*",
+    "gulp-connect": "*",
+    "gulp-filter": "*",
+    "gulp-gh-pages": "*",
+    "gulp-handlebars": "*",
+    "gulp-imagemin": "*",
+    "gulp-jshint": "*",
+    "gulp-less": "*",
+    "gulp-load-plugins": "*",
+    "gulp-markdown": "*",
+    "gulp-open": "*",
+    "gulp-rename": "*",
+    "gulp-sass": "*",
+    "gulp-size": "*",
+    "gulp-using": "*",
+    "gulp-util": "*",
+    "gulp-makdoc": "git+https://github.com/pismute/gulp-makdoc.git",
+    "handlebars": "*",
+    "highlight.js": "*",
+    "lodash": "*",
+    "moment": "*",
+    "pygmentize-bundled": "*",
+    "require-dir": "*",
+    "run-sequence": "*",
+    "through2": "*"
+  },
+  "keywords": [],
+  "dependencies": {}
+}

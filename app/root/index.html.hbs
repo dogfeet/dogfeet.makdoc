@@ -1,0 +1,49 @@
+{{! Articles }}
+<section class="content articles">
+  <div class="row">
+    <h1 class="col-sm-offset-2 col-sm-10">Articles</h1>
+  </div>
+
+  {{#each (-take 10 models)}}
+  <div class="row">
+    <article>
+      {{! DATE & Title }}
+      <div class="left-box col-sm-2 small-font">
+        <p property="dc:created">
+          {{d-format 'YYYY MMM DD' this.date}}
+        </p>
+      </div>
+      <div class="col-sm-10">
+        <a class="index-article-title" href="{{{this.uri}}}">
+          {{#if (-lt? @index 3)}}
+          <h2>{{{this.title}}}</h2>
+          {{else}}
+          <h4>{{{this.title}}}</h4>
+          {{/if}}
+        </a>
+
+        {{! Author & Info }}
+        <p>by {{{_gen-authors this.author}}}
+          | {{{_tag-links this.tags}}}</p>
+
+        {{#if (-lt? @index 3)}}
+        {{! First paragraph}}
+        <p>{{{_summary this.contentsWithoutLayouts}}}
+        <p><a class="btn btn-default" href="{{{this.uri}}}" role="button">Read more &raquo;</a></p>
+        </a>
+        {{/if}}
+      </div>
+    </article>
+  </div>
+  {{/each}}
+
+  <br /><br />
+
+  <div class="row">
+    <p class="col-sm-offset-2 col-sm-10">
+      <a class="btn btn-default" href="/site/archive.html">
+      go to Archive &raquo;
+      </a>
+    </p>
+  </div>
+</section>

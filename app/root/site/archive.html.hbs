@@ -1,0 +1,23 @@
+<style rel="stylesheet" media="screen, projection" scoped>
+  .article-footer {
+    margin-left: 10px;
+  }
+</style>
+
+<h1>Archive</h1>
+
+<section class="archive">
+  {{#each models}}
+  <div class="row">
+    <div class="col-sm-2 left-box small-font">{{{d-format 'YYYY MMM DD' this.date}}}</div>
+    <div class="col-sm-10 archive-item">
+      <a href="{{{this.uri}}}" property="dc:title"><h4>{{{this.title}}}</h4></a>
+      <div class="article-footer small-font">
+        <p> posted in {{{_tag-links this.tags}}} </p>
+        <p> by {{{_gen-authors this.author}}} </p>
+      </div>
+      <br />
+    </div>
+  </div>
+  {{/each}}
+</section>
