@@ -25,7 +25,8 @@
 
     var arrayfy = function(value) {
         //value is string or array
-        return Array.isArray(value)? value:value.split(',');
+        return !value? []:
+            Array.isArray(value)? value:value.split(',');
     }
 
     Handlebars.registerHelper('_gen-authors', function(name) {
@@ -60,7 +61,7 @@
                 .join(' ');
     });
 
-    Handlebars.registerHelper('_group-model', function(models){
+    Handlebars.registerHelper('_group-doc', function(models){
         return models.reduce(function(g, m){
             var tags = m['tags'];
             if( tags ) {
@@ -80,9 +81,15 @@
     });
 
     Handlebars.registerHelper('_summary', function(html) {
-        return (html)?
-            (/<h[123456].*?>.*<\/h[123456].*?>([\s\S*]*?)<h[123456].*?>.*<\/h[123456].*?>/i).exec(html)[1] :
-            "empty-summary";
+        if(html){
+            var matched = (/<h[123456].*?>.*<\/h[123456].*?>([\s\S*]*?)<h[123456].*?>.*<\/h[123456].*?>/i).exec(html)
+
+            if( matched ) {
+                return matched[1];
+            }
+        }
+
+        return "empty-summary";
     });
 
 })()
