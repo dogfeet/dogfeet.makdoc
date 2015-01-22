@@ -2,68 +2,47 @@
     'use strict';
 
     var _ = require('lodash');
-    var hbs = require('handlebars');
+    var Handlebars = require('handlebars');
     var makdoc = require('gulp-makdoc');
+    var pkg = require('../package.json');
 
-    var authors = {
-        'Changwoo Park': {
-            name: 'Changwoo Park',
-            email: 'pismute@gmail.com',
-            github: 'pismute',
-            twitter: 'pismute',
-            gravata: '2694a5501ec37eab0c6d4bf98c30303a'
-        },
-        'Sean Lee': {
-            name: 'Sean Lee',
-            email: 'sean@weaveus.com',
-            github: 'lethee',
-            twitter: 'lethee',
-            page: "<a href=\"http://kr.linkedin.com/in/seanseonghwanlee\">Sean Lee</a>",
-            gravata: '2699699e90ed281807fc0631ec89bbe2'
-        },
-        'Yongjae Choi': {
-            name: 'Yongjae Choi',
-            email: 'mage@weaveus.com',
-            github: 'lnyarl',
-            twitter: 'lnyarl',
-            gravata: '8232d82f449689642bb4c1f6bbc929bd'
+    makdoc.templateData({package:pkg});
+
+    var initAuthors = function(pkg){
+        var authors = pkg.contributors? pkg.contributors.slice():[];
+        if( pkg.author) {
+            authors.push( pkg.author );
         }
+
+        return authors.reduce(function(r, el){
+            r[ el.name ] = el;
+
+            return r;
+        }, {});
     }
 
-    var siteData = {
-        url: "http://dogfeet.github.io/",
-        title: "개발새발",
-        description: "정통 개발 주간 블로그입니다. 주 관심사는 학습과 WEB입니다.",
-        keywords: "학습,Learning,HTML5,Mobile,Web,iPhone,Android,Git,JavaScript,Scala,개발새발,dogfeet",
-        author: 'Changwoo Park, Sean Lee, Yongjae Choi',
-        date: new Date()
+    var authors = initAuthors(pkg);
+
+    var arrayfy = function(value) {
+        //value is string or array
+        return Array.isArray(value)? value:value.split(',');
     }
 
-    makdoc.templateData({site:siteData});
-
-    var to = {
-        array: function(value) {
-            //value is string or array
-            return _.isString(value) && value.split(',') || value;
-        },
-        value: function(obj, prop) {
-            var val = obj[prop];
-
-            return _.isFunction(val) && val() || val;
-        }
-    }
-
-    hbs.registerHelper('_page-authors', function(author) {
-        return _(to.array(author) || Object.keys(authors))
-            .map(function(it){ return it.trim(); })
+    Handlebars.registerHelper('_gen-authors', function(name) {
+        return _(arrayfy(name))
+            .map(function(it){
+                it = it.trim();
+                var author = authors[it];
+                return '<a href="' + author.url + '">' + author.name + '</a>';
+            })
             .value()
                 .join(', ');
     });
 
-    hbs.registerHelper('_tag-links', function(tags) {
-        return _(to.array(tags))
-            .map(function(it){ return it.trim(); })
+    Handlebars.registerHelper('_tag-links', function(tags) {
+        return _(arrayfy(tags))
             .map(function(it){
+                it = it.trim();
                 return '<a href="/site/tagmap.html#' +
                     it.toLowerCase() + '" class="tag">' +
                     it + '</a>';
@@ -72,23 +51,7 @@
                 .join(' ');
     });
 
-    hbs.registerHelper('_gen-authors', function(name) {
-        return _(to.array(name))
-            .map(function(it){ return it.trim(); })
-            .map(function(it){
-                var author = authors[it];
-
-                if (author.page) {
-                    return to.value(author, 'page');
-                } else {
-                    return "<a href=\"https://twitter.com/" + author.twitter + "/\">" + author.name + "</a>";
-                }
-            })
-            .value()
-                .join(', ');
-    });
-
-    hbs.registerHelper('_gen-twitter', function(names) {
+    Handlebars.registerHelper('_gen-twitter', function(names) {
         return _(names)
             .map(function(it){ return it.trim(); })
             .filter(function(it){ return !!authors[it]; })
@@ -97,7 +60,7 @@
                 .join(' ');
     });
 
-    hbs.registerHelper('_group-model', function(models){
+    Handlebars.registerHelper('_group-model', function(models){
         return models.reduce(function(g, m){
             var tags = m['tags'];
             if( tags ) {
@@ -116,7 +79,7 @@
         }, {});
     });
 
-    hbs.registerHelper('_summary', function(html) {
+    Handlebars.registerHelper('_summary', function(html) {
         return (html)?
             (/<h[123456].*?>.*<\/h[123456].*?>([\s\S*]*?)<h[123456].*?>.*<\/h[123456].*?>/i).exec(html)[1] :
             "empty-summary";

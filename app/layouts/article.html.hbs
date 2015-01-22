@@ -15,11 +15,11 @@
       <div id="social-buttons" class="top-line">
         <ul class="unstyled">
           <li><a class="twitter-share-button" href="https://twitter.com/share"
-            data-url="{{{url}}}" data-via="{{{-join (-map 's-trim' (s-split ',' author)) ' @'}}}"
+            data-url="{{{s-slice package.homepage 0 -1}}}{{{uri}}}" data-via="{{{-join (-map 's-trim' (s-split ',' author)) ' @'}}}"
             data-count="horizontal" data-lang="en">Tweet</a></li>
-          <li><div class="g-plusone" data-size="medium" data-href="{{{url}}}"></div></li>
+          <li><div class="g-plusone" data-size="medium" data-href="{{{s-slice package.homepage 0 -1}}}{{{uri}}}"></div></li>
           <li><div class="fb-like"
-            data-href="{{{url}}}" data-send="false"
+            data-href="{{{s-slice package.homepage 0 -1}}}{{{uri}}}" data-send="false"
             data-layout="button_count" data-show-faces="false"></div></li>
         </ul>
       </div>

@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge"></meta>
   <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
 
-  <title>#dogfeet - {{{-find '-not-empty?' (-array title site.title)}}}</title>
+  <title>#dogfeet - {{{-find '-not-empty?' (-array title package.title)}}}</title>
   {{>meta-seo}}
 
   {{! Icons }}
@@ -18,7 +18,7 @@
   <link rel="apple-touch-icon" sizes="114x114"
     href="images/apple-touch-icon-114x114.png"></link>
   <link rel="alternate" type="application/atom+xml"
-    title="{{{-find '-not-empty?' (-array title site.title)}}} &raquo; Feed"
+    title="{{{-find '-not-empty?' (-array title package.title)}}} &raquo; Feed"
     href="http://feeds.feedburner.com/github/dogfeet"></link>
 
   {{! Styles }}
@@ -72,7 +72,7 @@
 
   {{! GA }}
   <script>
-    if( '{{{site.url}}}' === 'http://' + window.location.hostname ) {
+    if( '{{{package.homepage}}}' === 'http://' + window.location.hostname ) {
       var _gaq = _gaq || [];
       _gaq.push(['_setAccount', 'UA-27493298-1']);
       _gaq.push(['_trackPageview']);
