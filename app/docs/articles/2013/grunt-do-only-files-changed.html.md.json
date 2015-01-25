@@ -2,5 +2,5 @@
   "layout": "article",
   "author": "Changwoo Park",
   "date": "2013-9-22",
-  "tags": ["grunt", "node", "watch"]
+  "keywords": ["grunt", "node", "watch"]
 }

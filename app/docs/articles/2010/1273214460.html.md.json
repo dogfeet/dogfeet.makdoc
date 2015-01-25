@@ -2,5 +2,5 @@
   "layout": "article",
   "author": "Sean Lee",
   "date": "2010-05-07",
-  "tags": ["c++","Downcasting","dynamic_cast","virtual class"]
+  "keywords": ["c++","Downcasting","dynamic_cast","virtual class"]
 }

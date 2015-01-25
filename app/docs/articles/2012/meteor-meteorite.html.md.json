@@ -2,5 +2,5 @@
   "layout": "article",
   "author": "Changwoo Park",
   "date": "2012-9-21",
-  "tags": ["meteor", "meteorite", "package"]
+  "keywords": ["meteor", "meteorite", "package"]
 }

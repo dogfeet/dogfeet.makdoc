@@ -2,5 +2,5 @@
   "layout": "article",
   "author": "Changwoo Park",
   "date": "2009-01-02",
-  "tags": ["Java","Charset","Encoding","Groovy","UTF-8"]
+  "keywords": ["Java","Charset","Encoding","Groovy","UTF-8"]
 }

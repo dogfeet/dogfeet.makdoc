@@ -2,5 +2,5 @@
   "layout": "article",
   "author": "Changwoo Park",
   "date": "2011-12-17",
-  "tags": ["git", "diffmerge"]
+  "keywords": ["git", "diffmerge"]
 }

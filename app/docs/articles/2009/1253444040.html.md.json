@@ -2,5 +2,5 @@
   "layout": "article",
   "author": "Sean Lee",
   "date": "2009-09-23",
-  "tags": ["Java","Spring","Jpetstore","Spring MVC"]
+  "keywords": ["Java","Spring","Jpetstore","Spring MVC"]
 }

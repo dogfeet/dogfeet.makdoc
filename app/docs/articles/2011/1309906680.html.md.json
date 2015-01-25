@@ -2,5 +2,5 @@
   "layout": "article",
   "author": "Changwoo Park",
   "date": "2011-07-05",
-  "tags": ["nodejs", "felix", "guide"]
+  "keywords": ["nodejs", "felix", "guide"]
 }

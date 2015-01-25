@@ -2,5 +2,5 @@
   "layout": "article",
   "author": "Changwoo Park",
   "date": "2012-3-3",
-  "tags": ["Git", "Tracking Branch", "Remote Tracking Branch"]
+  "keywords": ["Git", "Tracking Branch", "Remote Tracking Branch"]
 }

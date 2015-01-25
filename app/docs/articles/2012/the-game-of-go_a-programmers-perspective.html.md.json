@@ -2,5 +2,5 @@
   "layout": "article",
   "author": "Yongjae Choi",
   "date": "2012-05-01",
-  "tags": ["go", "바둑", "programmer", "computing"]
+  "keywords": ["go", "바둑", "programmer", "computing"]
 }

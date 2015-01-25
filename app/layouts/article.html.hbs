@@ -15,7 +15,7 @@
       <div id="social-buttons" class="top-line">
         <ul class="unstyled">
           <li><a class="twitter-share-button" href="https://twitter.com/share"
-            data-url="{{{s-slice package.homepage 0 -1}}}{{{uri}}}" data-via="{{{-join (-map 's-trim' (s-split ',' author)) ' @'}}}"
+            data-url="{{{s-slice package.homepage 0 -1}}}{{{uri}}}" data-via="{{{s-slice (_gen-twitter author) 1}}}"
             data-count="horizontal" data-lang="en">Tweet</a></li>
           <li><div class="g-plusone" data-size="medium" data-href="{{{s-slice package.homepage 0 -1}}}{{{uri}}}"></div></li>
           <li><div class="fb-like"

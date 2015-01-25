@@ -53,7 +53,7 @@
     });
 
     Handlebars.registerHelper('_gen-twitter', function(names) {
-        return _(names)
+        return _(arrayfy(names))
             .map(function(it){ return it.trim(); })
             .filter(function(it){ return !!authors[it]; })
             .map(function(it){ return '@' + authors[it].twitter; })

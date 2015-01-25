@@ -2,5 +2,5 @@
   "layout": "article",
   "author": "Sean Lee",
   "date": "2009-09-03",
-  "tags": ["C","namespace","selectnodes","selectsinglenode","xml","xmlns","xpath"]
+  "keywords": ["C","namespace","selectnodes","selectsinglenode","xml","xmlns","xpath"]
 }

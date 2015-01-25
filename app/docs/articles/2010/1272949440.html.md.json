@@ -2,5 +2,5 @@
   "layout": "article",
   "author": "Changwoo Park",
   "date": "2010-05-04",
-  "tags": ["Java","Spring","Eclipse","m2eclipse","Maven","test"]
+  "keywords": ["Java","Spring","Eclipse","m2eclipse","Maven","test"]
 }

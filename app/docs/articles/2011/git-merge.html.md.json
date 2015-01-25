@@ -2,5 +2,5 @@
   "layout": "article",
   "author": "Changwoo Park",
   "date": "2011-12-10",
-  "tags": ["Git", "Branch", "Merge", "Rebase"]
+  "keywords": ["Git", "Branch", "Merge", "Rebase"]
 }

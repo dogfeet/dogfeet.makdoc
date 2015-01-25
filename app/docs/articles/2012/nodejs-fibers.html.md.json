@@ -2,5 +2,5 @@
   "layout": "article",
   "author": "Changwoo Park",
   "date": "2012-6-10",
-  "tags": ["nodejs", "node-fibers" ]
+  "keywords": ["nodejs", "node-fibers" ]
 }

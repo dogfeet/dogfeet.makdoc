@@ -2,5 +2,5 @@
   "layout": "article",
   "author": "Changwoo Park",
   "date": "2013-9-25",
-  "tags": ["git", "AngularJS", "Commit Message", "Conventions", "grunt-conventional-changelog"]
+  "keywords": ["git", "AngularJS", "Commit Message", "Conventions", "grunt-conventional-changelog"]
 }

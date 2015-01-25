@@ -2,5 +2,5 @@
   "layout": "article",
   "author": "Changwoo Park",
   "date": "2011-12-01",
-  "tags": ["Bash-it", "NVM", "git", "git-flow"]
+  "keywords": ["Bash-it", "NVM", "git", "git-flow"]
 }

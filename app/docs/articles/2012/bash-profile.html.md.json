@@ -2,5 +2,5 @@
   "layout": "article",
   "author": "Changwoo Park",
   "date": "2012-4-22",
-  "tags": ["Bash", ".profile", ".bash_profile", ".bashrc"]
+  "keywords": ["Bash", ".profile", ".bash_profile", ".bashrc"]
 }

@@ -2,5 +2,5 @@
   "layout": "article",
   "author": "Changwoo Park, Sean Lee",
   "date": "2012-1-8",
-  "tags": ["git", "progit", "번역"]
+  "keywords": ["git", "progit", "번역"]
 }

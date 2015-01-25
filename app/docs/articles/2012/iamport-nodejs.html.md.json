@@ -2,5 +2,5 @@
   "layout": "article",
   "author": "Changwoo Park",
   "date": "2012-6-17",
-  "tags": ["nodejs", "coroutine", "fiber", "iamport"]
+  "keywords": ["nodejs", "coroutine", "fiber", "iamport"]
 }

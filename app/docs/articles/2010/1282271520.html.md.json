@@ -2,5 +2,5 @@
   "layout": "article",
   "author": "Sean Lee",
   "date": "2010-08-20",
-  "tags": ["Iterator","scheme","구구단"]
+  "keywords": ["Iterator","scheme","구구단"]
 }

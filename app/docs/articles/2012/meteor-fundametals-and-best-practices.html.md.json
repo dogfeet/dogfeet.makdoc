@@ -2,5 +2,5 @@
   "layout": "article",
   "author": "Changwoo Park",
   "date": "2012-8-19",
-  "tags": ["meteor", "node", "Andrew Scala"]
+  "keywords": ["meteor", "node", "Andrew Scala"]
 }

@@ -2,5 +2,5 @@
   "layout": "article",
   "author": "Yongjae Choi",
   "date": "2013-10-6",
-  "tags": ["grunt", "gruntplugin", "deadlink", "broken link", "link test"]
+  "keywords": ["grunt", "gruntplugin", "deadlink", "broken link", "link test"]
 }
