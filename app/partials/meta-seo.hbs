@@ -1,6 +1,6 @@
 <meta name="description"
 content="{{{-find '-not-empty?' (-array this.description package.description)}}}"></meta>
 <meta name="keywords"
-  content="{{{-find '-not-empty?' (-array this.keywords (-join package.keywords ','))}}}"></meta>
+  content="{{{-join (-find '-not-empty?' (-array this.keywords package.keywords)) ','}}}"></meta>
 <meta name="author"
   content="{{{-find '-not-empty?' (-array this.author (-join (-map (-partial '-get' 'name') package.contributors) ','))}}}"></meta>

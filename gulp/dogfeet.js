@@ -40,12 +40,12 @@
                 .join(', ');
     });
 
-    Handlebars.registerHelper('_tag-links', function(tags) {
-        return _(arrayfy(tags))
+    Handlebars.registerHelper('_keyword-links', function(keywords) {
+        return _(arrayfy(keywords))
             .map(function(it){
                 it = it.trim();
-                return '<a href="/site/tagmap.html#' +
-                    it.toLowerCase() + '" class="tag">' +
+                return '<a href="/site/keyword-map.html#' +
+                    it.toLowerCase() + '" class="keyword">' +
                     it + '</a>';
             })
             .value()
@@ -63,15 +63,15 @@
 
     Handlebars.registerHelper('_group-doc', function(models){
         return models.reduce(function(g, m){
-            var tags = m['tags'];
-            if( tags ) {
-                var tags = _.isString(tags)? tags.split(','): tags;
+            var keywords = m['keywords'];
+            if( keywords ) {
+                var keywords = _.isString(keywords)? keywords.split(','): keywords;
 
-                tags.forEach(function(tag){
-                    if( (g[tag]) ) {
-                        g[tag].push(m);
+                keywords.forEach(function(keyword){
+                    if( (g[keyword]) ) {
+                        g[keyword].push(m);
                     }else{
-                        g[tag] = [m];
+                        g[keyword] = [m];
                     }
                 });
             }
