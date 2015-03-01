@@ -1,96 +1,94 @@
 {
-    "title": "개발새발",
-    "name": "dogfeet.makdoc",
-    "description": "정통 개발 주간 블로그입니다. 주 관심사는 학습과 WEB입니다.",
-    "version": "0.1.0",
-    "homepage": "http://dogfeet.github.io/",
-    "contributors": [
-        {
-            "name": "Changwoo Park",
-            "email": "pismute@gmail.com",
-            "url": "https://pismute.github.io",
-            "twitter": "pismute"
-        },
-        {
-            "name": "Sean Lee",
-            "email": "sean@weaveus.com",
-            "url": "http://kr.linkedin.com/in/seanseonghwanlee/",
-            "twitter": "lethee"
-        },
-        {
-            "name": "Yongjae Choi",
-            "email": "mage@weaveus.com",
-            "url": "https://lnyarl.github.io",
-            "twitter": "lnyarl"
-        }
-    ],
-    "keywords": [
-        "학습",
-        "Learning",
-        "HTML5",
-        "Mobile",
-        "web",
-        "iPhone",
-        "Android",
-        "Git",
-        "JavaScript",
-        "Scala",
-        "개발새발",
-        "dogfeet"
-    ],
-    "repository": {
-        "type": "git",
-        "url": "git://github.com/pismute/dogfeet.makdoc.git"
+  "title": "개발새발",
+  "name": "dogfeet.makdoc",
+  "description": "정통 개발 블로그입니다.",
+  "version": "0.1.0",
+  "homepage": "http://dogfeet.github.io/",
+  "contributors": [
+    {
+      "name": "Changwoo Park",
+      "email": "pismute@gmail.com",
+      "url": "https://pismute.github.io",
+      "twitter": "pismute"
     },
-    "bugs": {
-        "url": "https://github.com/pismute/dogfeet.makdoc/issues"
+    {
+      "name": "Sean Lee",
+      "email": "sean@weaveus.com",
+      "url": "http://kr.linkedin.com/in/seanseonghwanlee/",
+      "twitter": "lethee"
     },
-    "licenses": [
-        {
-            "type": "MIT",
-            "url": "https://github.com/pismute/dogfeet.makdoc/blob/master/LICENSE-MIT"
-        }
-    ],
-    "private": true,
-    "main": "lib/dogfeet.makdoc",
-    "engines": {
-        "node": ">= 0.10.0"
-    },
-    "scripts": {
-        "test": "gulp test"
-    },
-    "devDependencies": {
-        "chai": "*",
-        "dashbars": "*",
-        "del": "*",
-        "gulp": "*",
-        "gulp-autoprefixer": "*",
-        "gulp-cache": "*",
-        "gulp-cached": "*",
-        "gulp-connect": "*",
-        "gulp-filter": "*",
-        "gulp-gh-pages": "*",
-        "gulp-handlebars": "*",
-        "gulp-imagemin": "*",
-        "gulp-jshint": "*",
-        "gulp-less": "*",
-        "gulp-load-plugins": "*",
-        "gulp-markdown": "*",
-        "gulp-open": "*",
-        "gulp-rename": "*",
-        "gulp-sass": "*",
-        "gulp-size": "*",
-        "gulp-using": "*",
-        "gulp-util": "*",
-        "gulp-makdoc": "git+https://github.com/pismute/gulp-makdoc.git",
-        "handlebars": "*",
-        "highlight.js": "*",
-        "lodash": "*",
-        "moment": "*",
-        "pygmentize-bundled": "*",
-        "require-dir": "*",
-        "run-sequence": "*",
-        "through2": "*"
-    },
-    "dependencies": {}
+    {
+      "name": "Yongjae Choi",
+      "email": "mage@weaveus.com",
+      "url": "https://lnyarl.github.io",
+      "twitter": "lnyarl"
+    }
+  ],
+  "keywords": [
+    "학습",
+    "Learning",
+    "HTML5",
+    "Mobile",
+    "web",
+    "iPhone",
+    "Android",
+    "Git",
+    "JavaScript",
+    "Scala",
+    "개발새발",
+    "dogfeet"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/pismute/dogfeet.makdoc.git"
+  },
+  "bugs": {
+    "url": "https://github.com/pismute/dogfeet.makdoc/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/pismute/dogfeet.makdoc/blob/master/LICENSE-MIT"
+    }
+  ],
+  "private": true,
+  "main": "lib/dogfeet.makdoc",
+  "engines": {
+    "node": ">= 0.10.0"
+  },
+  "scripts": {
+    "test": "gulp test"
+  },
+  "devDependencies": {
+    "chai": "*",
+    "dashbars": "*",
+    "del": "*",
+    "gulp": "*",
+    "gulp-autoprefixer": "*",
+    "gulp-cache": "*",
+    "gulp-cached": "*",
+    "gulp-connect": "*",
+    "gulp-filter": "*",
+    "gulp-gh-pages": "*",
+    "gulp-handlebars": "*",
+    "gulp-imagemin": "*",
+    "gulp-jshint": "*",
+    "gulp-load-plugins": "*",
+    "gulp-makdoc": "git+https://github.com/pismute/gulp-makdoc.git",
+    "gulp-markdown": "*",
+    "gulp-open": "*",
+    "gulp-rename": "*",
+    "gulp-size": "*",
+    "gulp-using": "*",
+    "gulp-util": "*",
+    "handlebars": "*",
+    "lodash": "*",
+    "marked": "*",
+    "moment": "*",
+    "pygmentize-bundled": "*",
+    "require-dir": "*",
+    "run-sequence": "*",
+    "through2": "*"
+  },
+  "dependencies": {}
 }
